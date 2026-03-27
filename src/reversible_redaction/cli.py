@@ -11,7 +11,10 @@ from .restore import restore_text
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="reversible-redaction")
+    parser = argparse.ArgumentParser(
+        prog="reversible-redaction",
+        description="Local reversible redaction CLI for enterprise document workflows.",
+    )
     subparsers = parser.add_subparsers(dest="command")
     subparsers.required = True
 
