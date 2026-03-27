@@ -85,22 +85,28 @@ Examples:
 
 ### Phase 2
 
-- `.docx` support
-- Preserve paragraph/table formatting
+- Full OpenClaw skill packaging
+- Ship a usable first version as a packaged skill
+- Keep the implementation reusable outside DingTalk
 
 ### Phase 3
 
-- `.xlsx` support
+- `.docx` support
+- Preserve paragraph/table formatting
 
 ### Phase 4
 
-- `.pdf` support
+- `.xlsx` support
 
 ### Phase 5
 
-- Full OpenClaw skill packaging
+- `.pdf` support
+
+### Phase 6
+
 - Multi-entry integration
 - Audit improvements
+- Policy tuning and deeper automation
 
 ## Success Criteria
 
