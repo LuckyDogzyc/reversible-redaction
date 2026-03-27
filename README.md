@@ -58,4 +58,9 @@ flowchart TD
 - Local file restoration
 - OpenClaw skill integration
 
+## Skill packaging
+
+The packaged OpenClaw skill lives at `skills/reversible-redaction/SKILL.md`.
+It only consumes redacted content and leaves restoration to the local pipeline.
+
 See `docs/PRD.md` for the product direction.
