@@ -12,7 +12,7 @@ A local reversible document redaction pipeline for enterprise document workflows
 ## Current status
 
 - PRD defined
-- Phase 1 implementation in progress
+- Phase 2 packaging in progress
 
 ## Workflow
 
