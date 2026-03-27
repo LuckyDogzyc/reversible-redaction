@@ -283,3 +283,4 @@ git commit -m "test: verify phase 1 reversible redaction flow"
 - Do not add docx/xlsx/pdf support in phase 1.
 - Prefer small commits after each task.
 - If a test needs fixture data, keep it tiny and obvious.
+- After Phase 1 is done, immediately move into **full OpenClaw skill packaging** so the project ships as a usable skill before expanding to more file formats.
