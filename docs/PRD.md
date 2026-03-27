@@ -7,7 +7,7 @@ Enterprise project managers often work with documents containing sensitive data 
 This project provides a local reversible redaction pipeline:
 
 1. Ingest text or files locally
-2. Detect sensitive content using rules plus a small local LLM
+2. Detect sensitive content using rules first; small local LLM assistance is deferred to the final phase
 3. Replace sensitive content with placeholders
 4. Send only redacted content to OpenClaw / LLM
 5. Keep LLM output redacted
@@ -44,11 +44,11 @@ This project provides a local reversible redaction pipeline:
 ### Key capabilities
 
 - Rule-first scanning
-- Local small LLM assisted detection
 - Placeholder replacement
 - Mapping table generation
 - Local file restoration
 - Redacted-only LLM output
+- Local small LLM assisted detection is reserved for the final phase
 
 ## Core Modules
 
@@ -107,6 +107,7 @@ Examples:
 - Multi-entry integration
 - Audit improvements
 - Policy tuning and deeper automation
+- Local small LLM assisted detection and final-pass entity refinement
 
 ## Success Criteria
 
