@@ -12,7 +12,20 @@ A local reversible document redaction pipeline for enterprise document workflows
 ## Current status
 
 - PRD defined
-- Phase 1 planning next
+- Phase 1 implementation in progress
+
+## Workflow
+
+```mermaid
+flowchart TD
+    A[Input text or file] --> B[Local scanning]
+    B --> C[Rule-based redaction]
+    C --> D[Mapping table generated]
+    D --> E[Redacted text sent to LLM / OpenClaw]
+    E --> F[LLM output remains redacted]
+    F --> G[Local file restoration]
+    G --> H[Final delivery file]
+```
 
 ## Scope
 
