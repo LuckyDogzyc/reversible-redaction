@@ -34,22 +34,26 @@ _PATTERNS: list[tuple[str, re.Pattern[str]]] = [
 
 
 def _dedupe_keep_first(matches: Iterable[Entity]) -> list[Entity]:
-    seen: set[tuple[str, str]] = set()
+    seen: set[str] = set()
     result: list[Entity] = []
     for entity in matches:
-        key = (entity.kind, entity.original)
-        if key in seen:
+        if entity.original in seen:
             continue
-        seen.add(key)
+        seen.add(entity.original)
         result.append(entity)
     return result
 
 
 def scan_entities(text: str) -> list[Entity]:
     found: list[Entity] = []
+    seen: set[str] = set()
     for kind, pattern in _PATTERNS:
         for match in pattern.finditer(text):
-            found.append(Entity(kind=kind, original=match.group(0), start=match.start(), end=match.end()))
+            original = match.group(0)
+            if original in seen:
+                continue
+            seen.add(original)
+            found.append(Entity(kind=kind, original=original, start=match.start(), end=match.end()))
 
     found.sort(key=lambda item: (item.start, item.end, item.kind))
-    return _dedupe_keep_first(found)
+    return found

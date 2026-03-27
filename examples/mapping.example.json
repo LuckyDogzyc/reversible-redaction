@@ -1,0 +1,5 @@
+[
+  {"token": "[[IP_001]]", "kind": "ip", "original": "10.1.2.3"},
+  {"token": "[[HOSTNAME_001]]", "kind": "hostname", "original": "kpw_proxy_72"},
+  {"token": "[[PHONE_001]]", "kind": "phone", "original": "13800000000"}
+]

@@ -27,6 +27,30 @@ flowchart TD
     G --> H[Final delivery file]
 ```
 
+## Examples
+
+### Input
+
+```text
+机房主机 10.1.2.3 上运行 kpw_proxy_72，手机号 13800000000
+```
+
+### Redacted output
+
+```text
+机房主机 [[IP_001]] 上运行 [[HOSTNAME_001]]，手机号 [[PHONE_001]]
+```
+
+### Mapping table
+
+```json
+[
+  {"token": "[[IP_001]]", "kind": "ip", "original": "10.1.2.3"},
+  {"token": "[[HOSTNAME_001]]", "kind": "hostname", "original": "kpw_proxy_72"},
+  {"token": "[[PHONE_001]]", "kind": "phone", "original": "13800000000"}
+]
+```
+
 ## Scope
 
 - Text redaction
